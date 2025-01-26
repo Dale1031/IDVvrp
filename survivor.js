@@ -1,3 +1,4 @@
+console.log("survivor.js is loaded and executing");
 // List of labels
 const labels = [
     "幸运儿", "医生", "律师", "慈善家", "园丁", "魔术师", "冒险家", "佣兵", "祭司", "空军", 
