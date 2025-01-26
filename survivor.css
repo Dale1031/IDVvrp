@@ -24,3 +24,18 @@ body {
     background-color: #f4f4f4;
     font-weight: bold;
 }
+
+/* Styling for the map header */
+#mapHeader {
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #d9f7be;
+}
+
+/* Styling for the map content */
+#mapContent {
+    font-size: 1.0rem;
+    color: #333;
+    background-color: #ffffff !important; /* Ensure white background */
+    font-weight: bold;
+}

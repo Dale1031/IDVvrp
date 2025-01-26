@@ -7,11 +7,22 @@ const labels = [
     "记者", "飞行家", "啦啦队员", "木偶师", "火灾调查员", "法罗女士", "骑士"
 ];
 
-// Function to generate 4 unique random numbers
-function generateRandomNumbers() {
+// List of 天赋 (Talents)
+const talents = ["回光返照", "膝跳反射", "飞轮效应", "化险为夷", "无"];
+
+// List of 地图 (Maps)
+const maps = ["军工厂", "红教堂", "圣心医院", "湖景村", "月亮河公园", "里奥的回忆", "永眠镇(小)", "唐人街", "不归林"];
+
+// Function to generate a single random number
+function generateRandomNumber(max) {
+    return Math.floor(Math.random() * max) + 1; // Random number between 1 and max (inclusive)
+}
+
+// Function to generate unique random numbers
+function generateRandomNumbers(count, max) {
     const numbers = [];
-    while (numbers.length < 4) {
-        const randomNum = Math.floor(Math.random() * 46); // Generate a number between 0 and 45
+    while (numbers.length < count) {
+        const randomNum = Math.floor(Math.random() * max);
         if (!numbers.includes(randomNum)) {
             numbers.push(randomNum);
         }
@@ -19,17 +30,36 @@ function generateRandomNumbers() {
     return numbers;
 }
 
-// Function to populate the table with random labels
+// Function to populate the table
 function populateTable() {
-    const randomNumbers = generateRandomNumbers();
-    const selectedLabels = randomNumbers.map(num => labels[num]); // Map random numbers to labels
+    // Generate a random map
+    const randomMap = maps[Math.floor(Math.random() * maps.length)];
+    document.getElementById("mapContent").textContent = randomMap;
 
-    // Populate the table
+    // Generate 4 random labels for 求生阵容
+    const randomLabelNumbers = generateRandomNumbers(4, labels.length);
+    const selectedLabels = randomLabelNumbers.map(num => labels[num]);
+
+    // Determine the range for 选点 based on the map
+    let selectionRange = 9; // Default range for all maps
+    if (randomMap === "湖景村" || randomMap === "月亮河公园") {
+        selectionRange = 12;
+    } else if (randomMap === "永眠镇(小)") {
+        selectionRange = 10;
+    }
+
     for (let i = 0; i < selectedLabels.length; i++) {
+        // Fill the 求生阵容 column
         document.getElementById(`label${i + 1}`).textContent = selectedLabels[i];
-        document.getElementById(`talent${i + 1}`).textContent = ""; // Placeholder for 天赋
-        document.getElementById(`skill${i + 1}`).textContent = "";  // Placeholder for 技能
-        document.getElementById(`selection${i + 1}`).textContent = ""; // Placeholder for 选点
+        
+        // Generate 2 random talents for 天赋
+        const randomTalentNumbers = generateRandomNumbers(2, talents.length);
+        const selectedTalents = randomTalentNumbers.map(num => talents[num]).join(", ");
+        document.getElementById(`talent${i + 1}`).textContent = selectedTalents;
+
+        // Fill the 选点 column based on the map's range
+        const randomSelection = generateRandomNumber(selectionRange);
+        document.getElementById(`selection${i + 1}`).textContent = randomSelection;
     }
 }
 
