@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random Label Generator</title>
+    <title>非机杯：求生页面/title>
+    <link rel="icon" type="image/jpeg" href="icon.jpg">
     <link rel="stylesheet" href="survivor.css">
 </head>
 <body>
-    <h1>求生阵容生成</h1>
-    <button id="generateBtn">生成四位随机求生</button>
+    <h1>随机生成四位求生以及地图</h1>
+    <button id="generateBtn">随机生成</button>
+    
+    <!-- Map Section -->
     <table id="outputTable">
         <thead>
             <tr>
+                <th colspan="4" id="mapHeader">地图</th>
+            </tr>
+            <tr>
+                <th id="mapContent" colspan="4"></th>
+            </tr>
+            <tr>
                 <th>求生阵容</th>
                 <th>天赋</th>
-                <th>技能</th>
                 <th>选点</th>
             </tr>
         </thead>
@@ -22,30 +30,25 @@
             <tr>
                 <td id="label1"></td>
                 <td id="talent1"></td>
-                <td id="skill1"></td>
                 <td id="selection1"></td>
             </tr>
             <tr>
                 <td id="label2"></td>
                 <td id="talent2"></td>
-                <td id="skill2"></td>
                 <td id="selection2"></td>
             </tr>
             <tr>
                 <td id="label3"></td>
                 <td id="talent3"></td>
-                <td id="skill3"></td>
                 <td id="selection3"></td>
             </tr>
             <tr>
                 <td id="label4"></td>
                 <td id="talent4"></td>
-                <td id="skill4"></td>
                 <td id="selection4"></td>
             </tr>
         </tbody>
     </table>
-    <div id="output"></div>
     <script src="survivor.js"></script>
 </body>
 </html>
