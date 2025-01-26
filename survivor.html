@@ -4,23 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Random Label Generator</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-        #output {
-            margin-top: 20px;
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="survivor.css">
 </head>
 <body>
     <h1>求生阵容生成</h1>
-    <p>生成4为随机求生</p>
-    <button id="generateBtn">Generate Labels</button>
+    <button id="generateBtn">生成四位随机求生</button>
+    <table id="outputTable">
+        <thead>
+            <tr>
+                <th>求生阵容</th>
+                <th>天赋</th>
+                <th>技能</th>
+                <th>选点</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="label1"></td>
+                <td id="talent1"></td>
+                <td id="skill1"></td>
+                <td id="selection1"></td>
+            </tr>
+            <tr>
+                <td id="label2"></td>
+                <td id="talent2"></td>
+                <td id="skill2"></td>
+                <td id="selection2"></td>
+            </tr>
+            <tr>
+                <td id="label3"></td>
+                <td id="talent3"></td>
+                <td id="skill3"></td>
+                <td id="selection3"></td>
+            </tr>
+            <tr>
+                <td id="label4"></td>
+                <td id="talent4"></td>
+                <td id="skill4"></td>
+                <td id="selection4"></td>
+            </tr>
+        </tbody>
+    </table>
     <div id="output"></div>
     <script src="survivor.js"></script>
 </body>

@@ -19,21 +19,19 @@ function generateRandomNumbers() {
     return numbers;
 }
 
-// Function to display the labels corresponding to the random numbers
-function displayRandomLabels() {
-    const outputDiv = document.getElementById("output");
-    outputDiv.innerHTML = ""; // Clear previous output
-
+// Function to populate the table with random labels
+function populateTable() {
     const randomNumbers = generateRandomNumbers();
     const selectedLabels = randomNumbers.map(num => labels[num]); // Map random numbers to labels
 
-    // Display the labels
-    selectedLabels.forEach(label => {
-        const labelElement = document.createElement("p");
-        labelElement.textContent = label;
-        outputDiv.appendChild(labelElement);
-    });
+    // Populate the table
+    for (let i = 0; i < selectedLabels.length; i++) {
+        document.getElementById(`label${i + 1}`).textContent = selectedLabels[i];
+        document.getElementById(`talent${i + 1}`).textContent = ""; // Placeholder for 天赋
+        document.getElementById(`skill${i + 1}`).textContent = "";  // Placeholder for 技能
+        document.getElementById(`selection${i + 1}`).textContent = ""; // Placeholder for 选点
+    }
 }
 
 // Attach event listener to the button
-document.getElementById("generateBtn").addEventListener("click", displayRandomLabels);
+document.getElementById("generateBtn").addEventListener("click", populateTable);
