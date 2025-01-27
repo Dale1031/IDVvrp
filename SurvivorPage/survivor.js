@@ -92,7 +92,7 @@ function populateTable() {
 
         // Add survivor image
         const survivorImg = document.createElement("img");
-        survivorImg.src = `/survivorImages/${encodeURIComponent(selectedLabels[i])}.png`;
+        survivorImg.src = `/SurvivorPage/survivorImages/${selectedLabels[i]}.png`;
         survivorImg.alt = selectedLabels[i];
         survivorImg.style.width = "150px";
         survivorImg.style.marginBottom = "10px";
@@ -110,7 +110,7 @@ function populateTable() {
             if (talent === "无") {
                 talentImg.src = `/SurvivorPage/talentImages/other.png`; // Default image for "无"
             } else {
-                talentImg.src = `/talentImages/${encodeURIComponent(talent)}.png`;
+                talentImg.src = `/SurvivorPage/talentImages/${talent}.png`;
             }
             talentImg.alt = talent;
             talentImg.style.width = "50px";
