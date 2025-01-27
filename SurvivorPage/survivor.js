@@ -92,7 +92,7 @@ function populateTable() {
 
         // Add survivor image
         const survivorImg = document.createElement("img");
-        survivorImg.src = `/SurvivorPage/survivorImages/${selectedLabels[i]}.png`;
+        survivorImg.src = `/survivorImages/${selectedLabels[i]}.png`;
         survivorImg.alt = selectedLabels[i];
         survivorImg.style.width = "150px";
         survivorImg.style.marginBottom = "10px";
@@ -108,9 +108,9 @@ function populateTable() {
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
             if (talent === "无") {
-                talentImg.src = `/SurvivorPage/talentImages/other.jpg`; // Default image for "无"
+                talentImg.src = `/talentImages/other.jpg`; // Default image for "无"
             } else {
-                talentImg.src = `/SurvivorPage/talentImages/${talent}.png`;
+                talentImg.src = `/talentImages/${talent}.png`;
             }
             talentImg.alt = talent;
             talentImg.style.width = "50px";
