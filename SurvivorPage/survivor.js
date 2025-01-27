@@ -108,7 +108,7 @@ function populateTable() {
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
             if (talent === "无") {
-                talentImg.src = `../other.jpg`; // Default image for "无"
+                talentImg.src = `/other.jpg`; // Default image for "无"
             } else {
                 talentImg.src = `/talentImages/${talent}.png`;
             }
