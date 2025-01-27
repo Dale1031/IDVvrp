@@ -1,0 +1,56 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+/* Styling for the table */
+#outputTable {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+/* Styling for table cells and headers */
+#outputTable th, #outputTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+/* Styling for the table headers */
+#outputTable th {
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+
+/* Align the survivor container and its contents */
+#imageContainer {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing between survivor containers */
+}
+
+/* Align the survivor image and talent images */
+#imageContainer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Talent images row alignment */
+#imageContainer div > div {
+    display: flex;
+    justify-content: center;
+    width: 150px; /* Match survivor image width */
+    gap: 10px; /* Spacing between talent images */
+}
+
+/* Talent images styling */
+#imageContainer div > div img {
+    width: 50px;
+    height: 50px;
+}
