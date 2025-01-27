@@ -10,7 +10,7 @@ const labels = [
 ];
 
 // List of 天赋 (Talents)
-const talents = ["回光返照", "膝跳反射", "飞轮效应", "化险为夷", "无"];
+const talents = ["Borrowed_Time", "Knee_Reflex", "Flywheel_Effect", "Tide_Turner", "None"];
 
 // List of 地图 (Maps)
 const maps = ["军工厂", "红教堂", "圣心医院", "湖景村", "月亮河公园", "里奥的回忆", "永眠镇(小)", "唐人街", "不归林"];
@@ -107,11 +107,7 @@ function populateTable() {
 
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
-            if (talent === "无") {
-                talentImg.src = `/other.jpg`; // Default image for "无"
-            } else {
-                talentImg.src = `/talentImages/${talent}.png`;
-            }
+            talentImg.src = `/talentImages/${talent}.png`;
             talentImg.alt = talent;
             talentImg.style.width = "50px";
             talentImg.style.height = "50px";
