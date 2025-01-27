@@ -108,7 +108,7 @@ function populateTable() {
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
             if (talent === "无") {
-                talentImg.src = `/SurvivorPage/talentImages/other.png`; // Default image for "无"
+                talentImg.src = `/SurvivorPage/talentImages/other.jpg`; // Default image for "无"
             } else {
                 talentImg.src = `/SurvivorPage/talentImages/${talent}.png`;
             }
