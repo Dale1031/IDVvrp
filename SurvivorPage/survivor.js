@@ -109,15 +109,15 @@ function populateTable() {
             const talentImg = document.createElement("img");
             "回光返照", "膝跳反射", "飞轮效应", "化险为夷", "无"
             if (talent === "回光返照") {
-                talentImg.src = `/IDVvrp/talentImages/1.png`; // Default image for "无"
+                talentImg.src = `../talentImages/1.png`; // Default image for "无"
             } else if (talent === "膝跳反射") {
-                talentImg.src = `/IDVvrp/talentImages/2.png`;
+                talentImg.src = `../talentImages/2.png`;
             } else if (talent === "飞轮效应"){
-                talentImg.src = `/IDVvrp/talentImages/3.png`;
+                talentImg.src = `../talentImages/3.png`;
             } else if (talent === "化险为夷"){
-                talentImg.src = `/IDVvrp/talentImages/4.png`;
+                talentImg.src = `../talentImages/4.png`;
             } else {
-                talentImg.src = `/IDVvrp/talentImages/5.png`;
+                talentImg.src = `../talentImages/5.png`;
             }
             talentImg.alt = talent;
             talentImg.style.width = "50px";
