@@ -92,7 +92,8 @@ function populateTable() {
 
         // Add survivor image
         const survivorImg = document.createElement("img");
-        survivorImg.src = `/survivorImages/${selectedLabels[i]}.png`;
+        let encoded_filepath = encodeURIComponent(selectedLabels[i])
+        survivorImg.src = `/survivorImages/${encoded_filepath}.png`;
         survivorImg.alt = selectedLabels[i];
         survivorImg.style.width = "150px";
         survivorImg.style.marginBottom = "10px";
