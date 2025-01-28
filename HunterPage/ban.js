@@ -16,7 +16,7 @@ let selectedHunters = [];
 // Display hunters dynamically
 hunters.forEach((hunter, index) => {
     const hunterImg = document.createElement("img");
-    hunterImg.src = `/HunterPage/images/${hunter}.png`; // Update with your image folder path
+    hunterImg.src = `../HunterPage/images/${hunter}.png`; // Update with your image folder path
     hunterImg.alt = hunter;
     hunterImg.dataset.name = hunter;
 

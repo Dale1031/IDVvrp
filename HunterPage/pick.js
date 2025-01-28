@@ -40,7 +40,7 @@ randomButton.addEventListener("click", () => {
     const selectedHunters = getRandomHunters();
     selectedHunters.forEach(hunter => {
         const hunterImg = document.createElement("img");
-        hunterImg.src = `/HunterPage/images/${hunter}.png`; // Update with your image folder path
+        hunterImg.src = `../HunterPage/images/${hunter}.png`; // Update with your image folder path
         hunterImg.alt = hunter;
         resultContainer.appendChild(hunterImg);
     });
