@@ -107,18 +107,7 @@ function populateTable() {
 
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
-            "回光返照", "膝跳反射", "飞轮效应", "化险为夷", "无"
-            if (talent === "回光返照") {
-                talentImg.src = `../talentImages/1.png`; // Default image for "无"
-            } else if (talent === "膝跳反射") {
-                talentImg.src = `../talentImages/2.png`;
-            } else if (talent === "飞轮效应"){
-                talentImg.src = `../talentImages/3.png`;
-            } else if (talent === "化险为夷"){
-                talentImg.src = `../talentImages/4.png`;
-            } else {
-                talentImg.src = `../talentImages/5.png`;
-            }
+            talentImg.src = `../talentImages/${talent}.png`;
             talentImg.alt = talent;
             talentImg.style.width = "50px";
             talentImg.style.height = "50px";
