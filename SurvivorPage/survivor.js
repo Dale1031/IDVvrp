@@ -92,8 +92,7 @@ function populateTable() {
 
         // Add survivor image
         const survivorImg = document.createElement("img");
-        let encoded_filepath = encodeURIComponent(selectedLabels[i])
-        survivorImg.src = `/survivorImages/${encoded_filepath}.png`;
+        survivorImg.src = `/survivorImages/${selectedLabels[i]}.png`;
         survivorImg.alt = selectedLabels[i];
         survivorImg.style.width = "150px";
         survivorImg.style.marginBottom = "10px";
@@ -108,10 +107,17 @@ function populateTable() {
 
         selectedTalents.forEach(talent => {
             const talentImg = document.createElement("img");
-            if (talent === "无") {
-                talentImg.src = `/talentImages/other.png`; // Default image for "无"
+            "回光返照", "膝跳反射", "飞轮效应", "化险为夷", "无"
+            if (talent === "回光返照") {
+                talentImg.src = `/talentImages/1.png`; // Default image for "无"
+            } else if (talent === "膝跳反射") {
+                talentImg.src = `/talentImages/2.png`;
+            } else if (talent === "飞轮效应"){
+                talentImg.src = `/talentImages/3.png`;
+            } else if (talent === "化险为夷"){
+                talentImg.src = `/talentImages/4.png`;
             } else {
-                talentImg.src = `/talentImages/${talent}.png`;
+                talentImg.src = `/talentImages/5.png`;
             }
             talentImg.alt = talent;
             talentImg.style.width = "50px";
