@@ -138,7 +138,9 @@ document.getElementById("confirmSelection").addEventListener("click", function (
     localStorage.setItem("selectedMap", selectedMap);
     localStorage.setItem("survivorPositions", JSON.stringify(survivorPositions));
 
-    // Redirect to ban page
-    window.location.href = "https://dale1031.github.io/IDVvrp/HunterPage/ban.html";
+    const baseUrl = window.location.origin + "/IDVvrp"; // Ensure "IDVvrp" is included
+
+    // Redirect to ban.html inside HunterPage
+    window.location.href = `${baseUrl}/HunterPage/ban.html`;
 });
 
