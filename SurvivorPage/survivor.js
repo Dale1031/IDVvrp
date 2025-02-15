@@ -139,6 +139,6 @@ document.getElementById("confirmSelection").addEventListener("click", function (
     localStorage.setItem("survivorPositions", JSON.stringify(survivorPositions));
 
     // Redirect to ban page
-    window.location.href = "../HunterPage/ban.html";
+    window.location.href = "/IDVvrp/HunterPage/ban.html";
 });
 
