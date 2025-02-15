@@ -125,5 +125,20 @@ function populateTable() {
 // Attach event listener to the button
 document.getElementById("generateBtn").addEventListener("click", populateTable);
 
+document.getElementById("confirmSelection").addEventListener("click", function () {
+    // Get selected map
+    const mapElement = document.getElementById("mapContent");
+    const selectedMap = mapElement ? mapElement.innerText.trim() : "未知地图";
 
+    // Get survivor positions
+    const positionElements = document.querySelectorAll("#outputTable td:last-child");
+    const survivorPositions = Array.from(positionElements).map(td => td.innerText.trim());
+
+    // Store in localStorage to pass to pick page
+    localStorage.setItem("selectedMap", selectedMap);
+    localStorage.setItem("survivorPositions", JSON.stringify(survivorPositions));
+
+    // Redirect to ban page
+    window.location.href = "/HunterPage/ban.html";
+});
 
